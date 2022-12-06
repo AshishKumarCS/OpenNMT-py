@@ -87,8 +87,8 @@ class TranslationBuilder(object):
         translations = []
 
         for b in range(batch_size):
-            # src_raw = self.data.examples[inds[b]].src[0]
-            src_raw = None
+            src_raw = self.data.examples[inds[b]].src[0]
+            #src_raw = None
             pred_sents = [self._build_target_tokens(
                 src[b, :] if src is not None else None,
                 src_raw,
